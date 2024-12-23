@@ -49,6 +49,47 @@ export default defineType({
       title: 'Body',
       type: 'blockContent',
     }),
+
+    defineField({
+      name: 'canonical',
+      title: 'Canonical URL',
+      type: 'url',
+      description: 'The canonical URL for this post.',
+    }),
+    defineField({
+      name: 'description',
+      title: 'Meta Description',
+      type: 'text',
+      description: 'A short description of the post for search engines.',
+    }),
+    defineField({
+      name: 'metaTags',
+      title: 'Meta Tags',
+      type: 'array',
+      of: [{type: 'string'}],
+      description: 'Additional meta tags for the post.',
+    }),
+    defineField({
+      name: 'ogTitle',
+      title: 'Open Graph Title',
+      type: 'string',
+      description: 'The title for Open Graph (used in social media previews).',
+    }),
+    defineField({
+      name: 'ogDescription',
+      title: 'Open Graph Description',
+      type: 'text',
+      description: 'The description for Open Graph (used in social media previews).',
+    }),
+    defineField({
+      name: 'ogImage',
+      title: 'Open Graph Image',
+      type: 'image',
+      description: 'The image for Open Graph (used in social media previews).',
+      options: {
+        hotspot: true,
+      },
+    }),
   ],
 
   preview: {
